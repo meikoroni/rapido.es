@@ -1,5 +1,126 @@
 @import '~bootstrap/dist/css/bootstrap';
-:root{
-    --primary: #ff0000;
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+*{
+    font-family: 'Mooli', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/*Estilos navBar*/
+
+
+:root{
+    --primary: #7FBFB3;
+    --secundary:#ffffffec;
+    /*Grises*/
+    --terciary:#8c8b8b5b;
+    --gris-hover-oscuro:#1a1919;
+    --gris-textos-claros:#565555;
+
+}
+::selection{
+background-color: var(--primary);
+color: var(--secundary);
+}
+/*Textos*/
+
+/*Botones*/
+.boton-verde{
+    width: 15vw;
+    height:6vh ;
+    background-color: var(--primary);
+    color: var(--secundary);
+    border-radius: 60px;
+    cursor: pointer;
+    gap:1px;
+    border: none;
+    font-size: 0.7rem;
+    transition: all 0.3s ease;
+}
+.boton-verde:hover{
+    background-color: #17957e;
+    color: #292828;
+}
+.boton-blanco{
+    background-color: var(--secundary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 60px;
+    cursor: pointer;
+    gap:1px;
+    width: 15vw;
+    height:6vh ;
+    font-size: 0.7rem;
+    transition: all 0.3s ease;
+}
+.boton-blanco:hover{
+    background-color: var(--primary);
+    color: var(--secundary);
+    border: 3px solid var(--secundary);
+}
+/*Clases NavBar*/
+header{
+    display: flex;
+    align-items: center;
+    border-bottom: 0.01rem solid var(--terciary);
+    position: sticky;
+    justify-content: space-between;
+    background-color: var(--secundary);
+    padding: 0.5rem;
+}
+.nav-list{
+    display:flex;
+    gap:1rem;
+}
+.logo{
+    height: 2.5rem;
+    padding-left: 0.2rem;
+    display:none
+}
+.logo-texto{
+    height: 2.5rem;
+    padding-left: 0.2rem;
+}
+.search-box{
+    width: 55vw;
+    height: 6vh;
+    border-radius: 60px;
+    color:var(--gris-textos-claros);
+    font-size: 0.7rem;
+
+}
+.search-box:hover{
+    border: 1.5px solid var(--terciary);
+}
+
+@media screen and (max-width: 990px){
+
+    header{
+        justify-content: flex-start;
+    }
+    .search-box{
+        width: 50vw;
+        transition: width 0.5s;
+    }
+}
+
+@media screen and (max-width: 875px){
+    .logo{
+        display: block;
+
+    }
+    .logo-texto{
+        display: none;
+    }
+    .boton-blanco{
+        display: none;
+    }
+    .boton-verde{
+        display: none;
+    }
+    header{
+        justify-content: flex-start;
+    }
+    .search-box{
+        width: 80vw;
+    }
+}

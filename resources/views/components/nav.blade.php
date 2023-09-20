@@ -1,24 +1,15 @@
-<div>
-    <nav class="navbar navbar-expand-lg bg-primary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar w/ text</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-1" type="search" placeholder="Escribe aqui lo que quieras buscar" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                  </form>
+<header>
+    <a href="#"><img src="{{ asset('logo-texto.png') }}" class='logo-texto'></a>
+    <a href="#"><img src="{{ asset('logo.png') }}" class='logo'></a>
+    <form class="d-flex" role="search">
+        <input class="form-control me-1 search-box" type="search" placeholder="Buscar en todas las categorías..." aria-label="Search">
+    </form>
+    <nav class="nav-bar">
+    <div class="nav-list">
+            <button class="boton-blanco" href="#">Regístrate o Inicia sesión</button>
+            <button class="boton-verde">Subir artículo</button>
 
-                <a class="nav-link" href="#">Subir producto</a>
+    </div>
+    </nav>
+</header>
 
-            </ul>
-            <span class="navbar-text">
-              Registro
-            </span>
-          </div>
-        </div>
-      </nav>
-</div>
