@@ -21,7 +21,7 @@
 background-color: var(--primary);
 color: var(--secundary);
 }
-/*Textos*/
+
 
 /*Botones*/
 .boton-verde{
@@ -88,9 +88,28 @@ header{
     font-size: 0.7rem;
 
 }
+.search-box:focus{
+    box-shadow:2px 2px 2px 2px var(--primary) !important;
+    outline: none;
+
+}
 .search-box:hover{
     border: 1.5px solid var(--terciary);
 }
+.nav-bottom{
+    display: none;
+}
+.nav-bottom-list li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    color: var(--gris-textos-claros);
+}
+
+.img-botton-nav{
+    height: 4vh;
+}
+
 
 @media screen and (max-width: 990px){
 
@@ -111,16 +130,37 @@ header{
     .logo-texto{
         display: none;
     }
-    .boton-blanco{
+    .nav-list{
         display: none;
     }
-    .boton-verde{
-        display: none;
-    }
+
     header{
         justify-content: flex-start;
     }
     .search-box{
         width: 80vw;
     }
+    .boton-blanco:hover{
+        border: none;
+    }
+    .nav-bottom{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        border-top: 0.01rem solid var(--terciary);
+        background-color: var(--secundary);
+    }
+    .nav-bottom-list{
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        height: 10vh;
+
+
+
+    }
+
 }
