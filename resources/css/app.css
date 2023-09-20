@@ -105,6 +105,7 @@ header{
     display: flex;
     flex-direction: column;
     color: var(--gris-textos-claros);
+    font-size:0.7rem ;
 }
 
 .img-botton-nav{
