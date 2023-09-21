@@ -15,6 +15,7 @@
 <body>
     <x-nav />
     {{$slot}}
+    <x-footer/>
     @vite(['resources/js/app.js'])
     {{$script ?? ''}}
 </body>
